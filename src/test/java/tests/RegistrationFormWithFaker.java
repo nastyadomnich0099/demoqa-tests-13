@@ -16,7 +16,6 @@ import static utils.RandomUtils.getRandomString;
 
 public class RegistrationFormWithFaker extends TestBase{
 
-   // Faker faker = new Faker();
     Faker faker = new Faker(new Locale("ru"));
     String firstName = faker.address().firstName();
     String lastName = faker.address().lastName();
