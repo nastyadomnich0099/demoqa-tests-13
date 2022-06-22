@@ -9,7 +9,6 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class TestBase {
     RegistrationFormPage  registrationFormPage = new RegistrationFormPage();
-
     @BeforeAll
     static void setUp(){
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
