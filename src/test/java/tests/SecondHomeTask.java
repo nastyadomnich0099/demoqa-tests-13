@@ -46,19 +46,6 @@ public class SecondHomeTask extends TestBase{
                     $("[id=lastName]").setValue("Domnich");
                     $("[id=userEmail]").setValue("domnicg@egorov.com");
 
-                    //driver.findElement (By.id("gender-radio-1")).click();
-                    // driver.findElement (By.id("hobbies-checkbox-1")).click();
-                    // driver.findElement(By.cssSelector("label[for='hobbies-checkbox-1']")).click();
-                    // driver.findElement(By.id("dateOfBirthInput")).clear();
-
-                    // driver.findElement(By.id("hobbies-checkbox-1")).click();
-                    //Select(driver.findElement(By.xpath(""))).
-//        $("[id=userNumber]").setValue("1234567");
-//        $("[id=submit]").click();
-//        $( "id=dateOfBirthInput").click();
-
-//        $("[id=output]").shouldHave(text(name), text("hanna@email.com"),
-//                text("Minsk address 1"), text("Another address 2"));
 
                     $("#genterWrapper").$(byText("Female")).click();
 
