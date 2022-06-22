@@ -18,10 +18,7 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class RegistrationFormPageObjects extends TestBase {
 
-
     TestData testData = new TestData();
-
-
     @Test
     void successfulTest (){
 
