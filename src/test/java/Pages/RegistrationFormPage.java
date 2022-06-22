@@ -1,7 +1,7 @@
 package Pages;
 
 import Pages.components.CalendarComponent;
-import Pages.components.ResultsTableComplonent;
+import Pages.components.ResultsTableComponent;
 import com.codeborne.selenide.SelenideElement;
 
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -20,7 +20,7 @@ public class RegistrationFormPage {
     WebDriver driver;
 
     public CalendarComponent calendarComponent = new CalendarComponent();
-    public ResultsTableComplonent resultsTableComplonent = new ResultsTableComplonent();
+    public Pages.components.ResultsTableComponent resultsTableComponent = new Pages.components.ResultsTableComponent();
     SelenideElement firstNameInput= $("#firstName"),
                      lastNameInput =  $("#lastName");
 
@@ -49,17 +49,17 @@ public class RegistrationFormPage {
         return this;
     }
 
-    public RegistrationFormPage setGender(){
+    public RegistrationFormPage setGender(String gender){
         $("#genterWrapper").$(byText("Female")).click();
         return this;
     }
 
-    public RegistrationFormPage setMobileNumber(){
+    public RegistrationFormPage setMobileNumber(String value){
         $("[id=userNumber]").setValue("1234567891");
        return this;
     }
 
-    public RegistrationFormPage setAddress(){
+    public RegistrationFormPage setAddress(String value){
         $("[id=currentAddress]").setValue("Minsk address");
         return this;
     }
@@ -82,20 +82,20 @@ public class RegistrationFormPage {
 
 
 
-    public RegistrationFormPage setStateAndCity(){
+    public RegistrationFormPage setStateAndCity(String value, String value1){
         $("[id=react-select-3-input]").setValue("Uttar Pradesh").pressEnter();
         $("[id=react-select-4-input]").setValue("Merrut").pressEnter();
 
         return this;
     }
 
-    public RegistrationFormPage setSubject(){
+    public RegistrationFormPage setSubject(String value){
         $("#subjectsInput").sendKeys("Maths");
         $("#subjectsInput").pressEnter();
          return this;
         }
 
-        public RegistrationFormPage setHobbies(){
+        public RegistrationFormPage setHobbies(String value){
            // WebDriverWait wait = new WebDriverWait(driver, 30);
             $("#hobbiesWrapper").$(byText("Reading")).click();
         return this;
@@ -108,11 +108,13 @@ public class RegistrationFormPage {
     }
 
 
-    public RegistrationFormPage checkResults(){
-     resultsTableComplonent.checkResult();
+    public RegistrationFormPage checkResults(String key, String value){
+     resultsTableComponent.checkResults(key, value );
      return this;
 
     }
+
+
 
     public  RegistrationFormPage clickSubmit(){
         $("[id=submit]").click();

@@ -11,8 +11,8 @@ import java.io.File;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
-import static tests.TestData.FIRST_NAME;
-import static tests.TestData.LAST_NAME;
+
+
 
 public class RegistrationFormWithTestDataTests {
 
@@ -25,19 +25,21 @@ public class RegistrationFormWithTestDataTests {
     @Test
     void successfulTest (){
 
+        TestData testData = new TestData();
 
 
-        System.setProperty("webdriver.chrome.driver","/usr/local/bin/chromedriver");
 
-        WebDriver driver = new ChromeDriver();
-       driver.get("https://demoqa.com/automation-practice-form");
+//        System.setProperty("webdriver.chrome.driver","/usr/local/bin/chromedriver");
+//
+//        WebDriver driver = new ChromeDriver();
+//       driver.get("https://demoqa.com/automation-practice-form");
 
        open("/automation-practice-form");
         executeJavaScript("$('footer').remove()");
         executeJavaScript("$('#fixedban').remove()");
 
-        $("[id=firstName]").setValue(FIRST_NAME);
-        $("[id=lastName]").setValue(LAST_NAME);
+        $("[id=firstName]").setValue(testData.firstName);
+        $("[id=lastName]").setValue(testData.lastName);
         $("[id=userEmail]").setValue("domnicg@egorov.com");
         $("#genterWrapper").$(byText("Female")).click();
         $("[id=userNumber]").setValue("1234567891");
@@ -55,7 +57,7 @@ public class RegistrationFormWithTestDataTests {
         $("[id=react-select-4-input]").setValue("Merrut").pressEnter();
         $("[id=submit]").click();
         $(".table-responsive").shouldHave(
-                text(FIRST_NAME),
+                text(testData.firstName),
                 text("domnicg@egorov.com"),
                 text("Female"),
                 text("1234567891"),

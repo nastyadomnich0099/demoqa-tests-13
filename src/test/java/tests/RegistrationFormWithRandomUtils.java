@@ -36,6 +36,7 @@ public class RegistrationFormWithRandomUtils extends TestBase{
         $("[id=lastName]").setValue(lastName);
         $("[id=userEmail]").setValue(email);
         $("#genterWrapper").$(byText("Female")).click();
+
         $("[id=userNumber]").setValue("1234567891");
         $("[id=currentAddress]").setValue("Minsk address");
         $("#dateOfBirthInput").click();

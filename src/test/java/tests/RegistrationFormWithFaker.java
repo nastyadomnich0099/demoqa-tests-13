@@ -39,7 +39,7 @@ public class RegistrationFormWithFaker extends TestBase{
         $("[id=userEmail]").setValue(email);
         $("#genterWrapper").$(byText("Female")).click();
         $("[id=userNumber]").setValue("1234567891");
-        $("[id=currentAddress]").setValue("Minsk address");
+        $("[id=currentAddress]").setValue(address);
         $("#dateOfBirthInput").click();
         $(".react-datepicker__month-select").selectOption("August");
         $(".react-datepicker__year-select").selectOption("1998");
@@ -62,7 +62,7 @@ public class RegistrationFormWithFaker extends TestBase{
                 text("Maths"),
                 text("Reading"),
                 text("screenshot.png"),
-                text("Minsk address"),
+                text(address),
                 text("Uttar Pradesh Merrut")
         );
     }
