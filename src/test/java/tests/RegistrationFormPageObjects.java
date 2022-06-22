@@ -37,8 +37,8 @@ public class RegistrationFormPageObjects extends TestBase {
                             .clickSubmit()
                 .checkResults("Student Name", testData.firstName + " " + testData.lastName)
                 .checkResults("Date of Birth", testData.dateOfBirth)
-                .checkResults("Student Email", testData.email)
-                .checkResults("Address", testData.address);
+               .checkResults("Student Email", testData.email)
+              .checkResults("Address", testData.address);
 
 
     }
