@@ -27,12 +27,6 @@ public class SecondHomeTask extends TestBase{
     void successfulTest (){
 
         String name = "Nastya";
-        System.setProperty("webdriver.chrome.driver","/usr/local/bin/chromedriver");
-
-        WebDriver driver = new ChromeDriver();
-       driver.get("https://demoqa.com/automation-practice-form");
-
-
 
        step("Open Practice from page ",() -> {
            open("/automation-practice-form");
