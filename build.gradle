@@ -65,9 +65,15 @@ useJUnitPlatform{
          useJUnitPlatform{
              includeTags "hello"
          }
+
          task owner_test(type: Test) {
              useJUnitPlatform {
                  includeTags "owner"
              }
 
- }}}
+             task prop_test(type: Test) {
+                 useJUnitPlatform {
+                     includeTags "test1"
+                 }
+
+ }}}}

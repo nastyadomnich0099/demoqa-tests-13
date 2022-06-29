@@ -27,4 +27,25 @@ public class OwnerTests {
 
     }
 
+    @Test
+    @Tag("test1")
+    void propTest() {
+        String browser = System.getProperty("browser", "safari");
+        String version = System.getProperty("version", "100");
+        String browserSize = System.getProperty("browserSize", "1920x1080");
+
+
+        String login = config.login1();
+        String password = config.password1();
+
+        System.out.println("Login: " + login);
+        System.out.println("Password: " + password);
+
+        String message = format("https://@selenoid.autotests.cloud/wd/hub", login, password);
+        System.out.println(browser);
+        System.out.println(version);
+        System.out.println(browserSize);
+
+    }
+
 }
