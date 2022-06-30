@@ -41,7 +41,6 @@ public class TestBase {
 
         String remoteDriverUrl = System.getProperty("remoteDriverUrl");
         Configuration.remote = "https://" + config.login() + ":" + config.password() + "@" + remoteDriverUrl;
-
         System.out.println(Configuration.remote = "https://" + config.login() + ":" + config.password() + "@" + remoteDriverUrl);
         System.out.println(config.login());
         System.out.println(config.password());
