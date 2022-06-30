@@ -4,6 +4,7 @@ import Pages.RegistrationFormPage;
 import com.codeborne.selenide.Configuration;
 import com.github.javafaker.Faker;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -20,7 +21,8 @@ public class RegistrationFormPageObjects extends TestBase {
 
     TestData testData = new TestData();
     @Test
-    void successfulTest (){
+    @Tag("test1")
+    void successfulTest(){
 
 
         registrationFormPage.OpenPage()

@@ -71,7 +71,7 @@ tasks.withType(Test) {
                  includeTags "owner"
              }}
 
-             task prop_test(type: Test) {
+             task successfulTest(type: Test) {
                  useJUnitPlatform {
                      includeTags "test1"
                  }
