@@ -60,7 +60,6 @@ tasks.withType(Test) {
          includeTags "test6"
      }
  }
-
      task hello_test(type: Test) {
          useJUnitPlatform {
              includeTags "hello"
