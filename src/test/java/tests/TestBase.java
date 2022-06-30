@@ -38,7 +38,6 @@ public class TestBase {
 
         System.out.println(config.baseurl());
         //Configuration.baseUrl = "https://demoqa.com";
-
         String remoteDriverUrl = System.getProperty("remoteDriverUrl");
         Configuration.remote = "https://" + config.login() + ":" + config.password() + "@" + remoteDriverUrl;
         System.out.println(Configuration.remote = "https://" + config.login() + ":" + config.password() + "@" + remoteDriverUrl);
