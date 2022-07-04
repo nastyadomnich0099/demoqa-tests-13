@@ -3,32 +3,32 @@ package Pages;
 import Pages.components.CalendarComponent;
 import Pages.components.ResultsTableComponent;
 import com.codeborne.selenide.SelenideElement;
-
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-
 import java.io.File;
-
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Selenide.executeJavaScript;
 
+
+
+
 public class RegistrationFormPage {
-    WebDriver driver;
+   // WebDriver driver;
+
 
     public CalendarComponent calendarComponent = new CalendarComponent();
+
     public Pages.components.ResultsTableComponent resultsTableComponent = new Pages.components.ResultsTableComponent();
     SelenideElement firstNameInput= $("#firstName"),
-                     lastNameInput =  $("#lastName");
+                    lastNameInput =  $("#lastName");
 
 
 
 
-    public RegistrationFormPage OpenPage(){
-
+    public RegistrationFormPage openPage(){
         open("/automation-practice-form");
         executeJavaScript("$('footer').remove()");
         executeJavaScript("$('#fixedban').remove()");

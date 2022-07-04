@@ -19,6 +19,9 @@ public class TestBase {
     RegistrationFormPage registrationFormPage = new RegistrationFormPage();
 
 
+
+
+
     @BeforeAll
     static void setUp() {
         CredentialsConfig config = ConfigFactory.create(CredentialsConfig.class);
@@ -29,22 +32,14 @@ public class TestBase {
         capabilities.setCapability("enableVideo", true);
 
         Configuration.browserCapabilities = capabilities;
-
-
         Configuration.baseUrl = config.baseurl();
         Configuration.browser = System.getProperty("browser");
         Configuration.browserVersion = System.getProperty("version");
         Configuration.browserSize = System.getProperty("browserSize");
-
-        System.out.println(config.baseurl());
-        //Configuration.baseUrl = "https://demoqa.com";
+//        Configuration.baseUrl = "https://demoqa.com";
         String remoteDriverUrl = System.getProperty("remoteDriverUrl");
-        Configuration.remote = "https://" + config.login() + ":" + config.password() + "@" + remoteDriverUrl;
-        System.out.println(Configuration.remote = "https://" + config.login() + ":" + config.password() + "@" + remoteDriverUrl);
-        System.out.println(config.login());
-        System.out.println(config.password());
-        System.out.println(Configuration.remote = "https://" + config.login() + ":" + config.password() + "@" + remoteDriverUrl);
-        //Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wb/hub";
+        Configuration.remote = String.format( "https://" + config.login() + ":" + config.password() + "@" + remoteDriverUrl);
+        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wb/hub";
 
 
 

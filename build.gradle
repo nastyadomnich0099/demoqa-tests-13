@@ -65,14 +65,14 @@ tasks.withType(Test) {
              includeTags "hello"
          }
      }
-         task owner_test(type: Test) {
+         task someTest1(type: Test) {
              useJUnitPlatform {
                  includeTags "owner"
              }}
 
              task successfulTest(type: Test) {
+                // systemProperties(System.getProperties())
                  useJUnitPlatform {
                      includeTags "test1"
                  }
-
- }
+             }

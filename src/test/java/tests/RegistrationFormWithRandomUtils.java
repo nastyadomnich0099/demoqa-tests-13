@@ -21,7 +21,7 @@ public class RegistrationFormWithRandomUtils extends TestBase{
 
 
     @Test
-    void successfulTest (){
+    void successfulTest123 (){
 
         System.setProperty("webdriver.chrome.driver","/usr/local/bin/chromedriver");
 
