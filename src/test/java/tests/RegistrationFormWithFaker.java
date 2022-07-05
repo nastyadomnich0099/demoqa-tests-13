@@ -23,7 +23,7 @@ public class RegistrationFormWithFaker extends TestBase{
     String address = faker.witcher().quote();
 
     @Test
-    void successfulTest (){
+    void successfulTest1234 (){
 
         System.setProperty("webdriver.chrome.driver","/usr/local/bin/chromedriver");
 

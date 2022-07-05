@@ -1,31 +1,21 @@
 package tests;
 
 import Pages.RegistrationFormPage;
-import com.codeborne.selenide.Configuration;
-import com.github.javafaker.Faker;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
-import java.io.File;
-import java.util.Locale;
-
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.*;
 
 
 public class RegistrationFormPageObjects extends TestBase {
 
     TestData testData = new TestData();
+
     @Test
     @Tag("test1")
     void successfulTest(){
 
 
-        registrationFormPage.OpenPage()
+        registrationFormPage.openPage()
                             .setFullName(testData.firstName, testData.lastName)
                             .setEmail(testData.email)
                             .setGender(testData.gender)
