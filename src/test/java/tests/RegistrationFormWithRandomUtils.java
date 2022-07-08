@@ -2,6 +2,7 @@ package tests;
 
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -19,7 +20,7 @@ public class RegistrationFormWithRandomUtils extends TestBase{
     String lastName = getRandomString(10);
     String email = getRandomEmail();
 
-
+    @Tag("test1")
     @Test
     void successfulTest123 (){
 

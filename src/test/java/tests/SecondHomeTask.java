@@ -6,6 +6,7 @@ import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.impl.WebElementSelector;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -21,7 +22,7 @@ import org.openqa.selenium.support.ui.Select;
 
 public class SecondHomeTask extends TestBase{
 
-
+    @Tag("test1")
     @Test
     @DisplayName("Successful fill form")
     void successfulTest (){

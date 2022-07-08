@@ -1,6 +1,7 @@
 package tests;
 
 import com.github.javafaker.Faker;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -22,6 +23,7 @@ public class RegistrationFormWithFaker extends TestBase{
     String email = faker.internet().emailAddress();
     String address = faker.witcher().quote();
 
+    @Tag("test1")
     @Test
     void successfulTest1234 (){
 

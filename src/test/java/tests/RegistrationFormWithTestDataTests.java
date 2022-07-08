@@ -2,6 +2,7 @@ package tests;
 
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -22,6 +23,7 @@ public class RegistrationFormWithTestDataTests {
         Configuration.browserSize = "1920x1080";
     }
 
+    @Tag("test1")
     @Test
     void successfulTest (){
 
