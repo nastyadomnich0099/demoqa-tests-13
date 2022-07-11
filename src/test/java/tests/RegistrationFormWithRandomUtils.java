@@ -2,6 +2,7 @@ package tests;
 
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -20,13 +21,18 @@ public class RegistrationFormWithRandomUtils extends TestBase{
     String email = getRandomEmail();
 
 
+    @Tag("test1")
     @Test
     void successfulTest123 (){
 
-        System.setProperty("webdriver.chrome.driver","/usr/local/bin/chromedriver");
 
-        WebDriver driver = new ChromeDriver();
-       driver.get("https://demoqa.com/automation-practice-form");
+
+//        System.setProperty("webdriver.chrome.driver","/usr/local/bin/chromedriver");
+//
+//        WebDriver driver = new ChromeDriver();
+//       driver.get("https://demoqa.com");
+
+
 
        open("/automation-practice-form");
         executeJavaScript("$('footer').remove()");
